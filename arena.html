@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cara a Cara | Hall of Legends</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container py-2">
+        <a class="navbar-brand brand" href="index.html">
+          <span>HALL</span> OF LEGENDS<span class="gold">.</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li><a class="nav-link" href="index.html">INÍCIO</a></li>
+            <li><a class="nav-link" href="lendas.html">LENDAS</a></li>
+            <li><a class="nav-link" href="arena.html">CARA A CARA</a></li>
+            <li>
+              <a class="nav-link" href="comunidade.html">
+                HISTÓRIA & COMUNIDADE
+              </a>
+            </li>
+          </ul>
+          <a
+            class="btn btn-gold btn-sm ms-lg-3 mt-3 mt-lg-0"
+            href="lendas.html"
+          >
+            EXPLORAR ↗
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="kicker">HEAD-TO-HEAD</div>
+        <h1 class="section-title">A <span class="gold">ARENA</span></h1>
+        <p class="sub mb-5">
+          Compare dois gigantes e depois monte seu quinteto histórico. As médias
+          exibidas são números de carreira na temporada regular, arredondados.
+        </p>
+
+        <div class="panel p-3 p-md-4 mb-5">
+          <div
+            class="d-flex justify-content-between flex-wrap gap-2 align-items-center mb-3"
+          >
+            <div>
+              <div class="kicker">01 / COMPARADOR</div>
+              <h2 class="display fs-1 mb-0">CARA A CARA</h2>
+            </div>
+            <span class="tag">ESTATÍSTICAS DE CARREIRA</span>
+          </div>
+          <div class="row g-3 align-items-end">
+            <div class="col-md-5">
+              <label class="muted small">JOGADOR A</label>
+              <select id="a" class="form-select"></select>
+            </div>
+            <div class="col-md-2 text-center display gold fs-1">VS</div>
+            <div class="col-md-5">
+              <label class="muted small">JOGADOR B</label>
+              <select id="b" class="form-select"></select>
+            </div>
+          </div>
+          <div class="row text-center my-4">
+            <div class="col-5">
+              <h3 id="nameA" class="display fs-2">Michael Jordan</h3>
+            </div>
+            <div class="col-2 gold fw-bold">VS</div>
+            <div class="col-5">
+              <h3 id="nameB" class="display fs-2">LeBron James</h3>
+            </div>
+          </div>
+          <div id="stats"></div>
+          <div class="muted small mt-3">
+            * Dados históricos resumidos para fins de comparação. Temporadas e
+            critérios podem variar entre fontes.
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="panel p-3 p-md-4" id="teamCard">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <div>
+                  <div class="kicker">02 / FANTASY LINEUP</div>
+                  <h2 class="display fs-1 mb-0">MEU QUINTETO</h2>
+                </div>
+                <i class="bi bi-trophy-fill gold fs-1"></i>
+              </div>
+              <p class="muted small">
+                Escolha um jogador para cada posição. Tente montar a equipe mais
+                forte da história!
+              </p>
+              <div class="row g-2" id="slots"></div>
+              <div class="text-center muted small mt-3">
+                ALL-TIME STARTING FIVE • HALL OF LEGENDS
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <button id="download" class="btn btn-gold">
+                BAIXAR COMO IMAGEM ↓
+              </button>
+              <button id="share" class="btn btn-outline-light">
+                COMPARTILHAR ↗
+              </button>
+              <button id="reset" class="btn btn-outline-light">LIMPAR</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="panel p-4 h-100">
+              <div class="kicker">DICAS DO DESAFIO</div>
+              <h3 class="display fs-2">EQUILÍBRIO VENCE JOGOS</h3>
+              <p class="muted small">PG — Armador: organiza o ataque.</p>
+              <p class="muted small">SG — Ala-armador: pontua e cria.</p>
+              <p class="muted small">SF — Ala: versatilidade.</p>
+              <p class="muted small">PF — Ala-pivô: força e mobilidade.</p>
+              <p class="muted small">C — Pivô: protege o garrafão.</p>
+              <hr class="border-secondary">
+              <p class="gold small mb-0">
+                Não existe escalação perfeita. A química também importa!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container d-flex flex-wrap justify-content-between gap-3">
+        <div class="brand">
+          <span>HALL</span> OF LEGENDS<span class="gold">.</span>
+          <div class="small muted" style="font-family: Inter">
+            A história do basquete vive aqui.
+          </div>
+        </div>
+        <div class="small align-self-center">
+          Projeto demonstrativo • Bootstrap 5 + JavaScript
+        </div>
+        <a href="creditos.html" class="small gold align-self-center">
+          CRÉDITOS DAS IMAGENS
+        </a>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="profileModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title display" id="profileTitle">Perfil</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body" id="profileContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script>
+      ["a", "b"].forEach((id) => {
+        $("#" + id).innerHTML = legends
+          .map((p) => `<option value="${p.id}">${p.name}</option>`)
+          .join("");
+      });
+      $("#a").value = "jordan";
+      $("#b").value = "lebron";
+
+      function compare() {
+        const a = legends.find((p) => p.id === $("#a").value);
+        const b = legends.find((p) => p.id === $("#b").value);
+        $("#nameA").textContent = a.name;
+        $("#nameB").textContent = b.name;
+
+        const rows = [
+          ["Pontos por jogo", "ppg", "PTS", 35],
+          ["Rebotes por jogo", "rpg", "REB", 25],
+          ["Assistências por jogo", "apg", "AST", 15],
+          ["Aproveitamento de arremessos", "fg", "FG%", 60],
+          ["Aproveitamento de 3 pontos", "three", "3P%", 50],
+          ["Títulos NBA", "titles", "TÍTULOS", 11],
+          ["Prêmios MVP", "mvp", "MVP", 6],
+          ["Seleções All-Star", "allstar", "ALL-STAR", 20],
+        ];
+
+        $("#stats").innerHTML = rows
+          .map(
+            ([label, k, u, max]) => `
+              <div class="compare-line">
+                <div class="d-flex justify-content-between small mb-2">
+                  <b>${a[k]} ${u}</b>
+                  <span class="muted">${label}</span>
+                  <b>${b[k]} ${u}</b>
+                </div>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <div class="bar">
+                      <span style="width:${Math.min((a[k] / max) * 100, 100)}%;float:right"></span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="bar">
+                      <span style="width:${Math.min((b[k] / max) * 100, 100)}%"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `,
+          )
+          .join("");
+      }
+
+      $("#a").onchange = compare;
+      $("#b").onchange = compare;
+      compare();
+
+      const pos = [
+        ["PG", "Armador"],
+        ["SG", "Ala-armador"],
+        ["SF", "Ala"],
+        ["PF", "Ala-pivô"],
+        ["C", "Pivô"],
+      ];
+      const team = {};
+
+      function drawSlots() {
+        $("#slots").innerHTML = pos
+          .map(([code, label]) => {
+            const p = legends.find((x) => x.id === team[code]);
+            return `
+              <div class="col-6 col-md">
+                <div class="slot ${p ? "filled" : ""}">
+                  ${
+                    p
+                      ? `
+                        <img
+                          src="${p.image}"
+                          alt="${p.name}"
+                          onerror="this.src='https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=300&q=80'"
+                        >
+                        <b>${p.name}</b>
+                        <small class="gold">${code}</small>
+                      `
+                      : `
+                        <i class="bi bi-plus-circle gold fs-2"></i>
+                        <b>${code}</b>
+                        <small class="muted">${label}</small>
+                      `
+                  }
+                  <select
+                    class="form-select form-select-sm mt-2 pick"
+                    data-pos="${code}"
+                  >
+                    <option value="">Escolher</option>
+                    ${legends
+                      .filter(
+                        (x) =>
+                          x.position === label ||
+                          (code === "SF" && x.position === "Ala") ||
+                          (code === "PF" && x.position === "Ala-pivô"),
+                      )
+                      .map(
+                        (x) =>
+                          `<option value="${x.id}" ${team[code] === x.id ? "selected" : ""}>${x.name}</option>`,
+                      )
+                      .join("")}
+                  </select>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+
+        document.querySelectorAll(".pick").forEach((s) => {
+          s.onchange = () => {
+            if (s.value) {
+              team[s.dataset.pos] = s.value;
+            } else {
+              delete team[s.dataset.pos];
+            }
+            drawSlots();
+          };
+        });
+      }
+
+      drawSlots();
+      $("#reset").onclick = () => {
+        Object.keys(team).forEach((k) => delete team[k]);
+        drawSlots();
+      };
+
+      $("#download").onclick = async () => {
+        if (Object.keys(team).length !== 5) {
+          alert("Escolha um jogador para as cinco posições.");
+          return;
+        }
+
+        const c = await html2canvas($("#teamCard"), {
+          backgroundColor: "#111925",
+          scale: 2,
+        });
+        const a = document.createElement("a");
+        a.download = "meu-quinteto-nba.png";
+        a.href = c.toDataURL("image/png");
+        a.click();
+      };
+
+      $("#share").onclick = async () => {
+        if (!Object.keys(team).length) {
+          alert("Monte seu quinteto primeiro.");
+          return;
+        }
+
+        const txt = pos
+          .map(
+            ([code]) =>
+              code +
+              ": " +
+              (team[code]
+                ? legends.find((p) => p.id === team[code]).name
+                : "—"),
+          )
+          .join(" | ");
+
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: "Meu quinteto histórico",
+              text: txt,
+            });
+          } catch (e) {}
+        } else {
+          await navigator.clipboard.writeText(txt);
+          alert("Escalação copiada!");
+        }
+      };
+    </script>
+  </body>
+</html>

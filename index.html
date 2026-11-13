@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Início | Hall of Legends</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container py-2">
+        <a class="navbar-brand brand" href="index.html">
+          <span>HALL</span> OF LEGENDS<span class="gold">.</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li><a class="nav-link" href="index.html">INÍCIO</a></li>
+            <li><a class="nav-link" href="lendas.html">LENDAS</a></li>
+            <li><a class="nav-link" href="arena.html">CARA A CARA</a></li>
+            <li>
+              <a class="nav-link" href="comunidade.html">
+                HISTÓRIA & COMUNIDADE
+              </a>
+            </li>
+          </ul>
+          <a
+            class="btn btn-gold btn-sm ms-lg-3 mt-3 mt-lg-0"
+            href="lendas.html"
+          >
+            EXPLORAR ↗
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container">
+        <div class="kicker mb-3">A HISTÓRIA É FEITA DE LENDA</div>
+        <h1>
+          THE GAME.<br>
+          <span class="gold">THE LEGENDS.</span>
+        </h1>
+        <p class="my-4">
+          Entre na quadra onde a história foi escrita. Conheça os gigantes da
+          NBA, compare carreiras, monte seu quinteto definitivo e descubra os
+          momentos que mudaram o basquete para sempre.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="lendas.html" class="btn btn-gold">
+            EXPLORAR AS LENDAS ↗
+          </a>
+          <a href="arena.html" class="btn btn-outline-light">
+            ENTRAR NA ARENA
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="py-4"
+      style="background: #0e141e; border-block: 1px solid var(--line)"
+    >
+      <div class="container">
+        <div class="row text-center g-3">
+          <div class="col-6 col-md-3">
+            <div class="stat">75+</div>
+            <div class="stat-label">Anos de história</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat">30</div>
+            <div class="stat-label">Franquias</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat">8</div>
+            <div class="stat-label">Lendas em destaque</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat">1</div>
+            <div class="stat-label">Jogo eterno</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4"
+        >
+          <div>
+            <div class="kicker">HALL DA FAMA</div>
+            <h2 class="section-title">
+              ÍCONES DA <span class="gold">QUADRA</span>
+            </h2>
+            <p class="sub mb-0">
+              Conheça algumas das maiores figuras da história da NBA.
+            </p>
+          </div>
+          <a href="lendas.html" class="btn btn-outline-light">
+            VER TODAS AS LENDAS ↗
+          </a>
+        </div>
+        <div class="row g-4" id="homePlayers"></div>
+      </div>
+    </section>
+
+    <section class="pb-5">
+      <div class="container">
+        <div
+          class="panel p-4 p-md-5 d-flex flex-wrap align-items-center justify-content-between gap-4"
+        >
+          <div>
+            <div class="kicker">SUA VEZ DE DECIDIR</div>
+            <h2 class="display fs-1 mb-2">QUEM É O GOAT?</h2>
+            <p class="muted mb-0">
+              Compare números, crie seu quinteto e vote no maior de todos.
+            </p>
+          </div>
+          <a href="arena.html" class="btn btn-gold">IR PARA A ARENA ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container d-flex flex-wrap justify-content-between gap-3">
+        <div class="brand">
+          <span>HALL</span> OF LEGENDS<span class="gold">.</span>
+          <div class="small muted" style="font-family: Inter">
+            A história do basquete vive aqui.
+          </div>
+        </div>
+        <div class="small align-self-center">
+          Projeto demonstrativo • Bootstrap 5 + JavaScript
+        </div>
+        <a href="creditos.html" class="small gold align-self-center">
+          CRÉDITOS DAS IMAGENS
+        </a>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="profileModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title display" id="profileTitle">Perfil</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body" id="profileContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+      $("#homePlayers").innerHTML = legends.slice(0, 4).map(playerCard).join("");
+    </script>
+  </body>
+</html>
